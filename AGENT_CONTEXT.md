@@ -5,7 +5,8 @@ Tài liệu này cung cấp ngữ cảnh để AI Agents nắm bắt kiến trú
 ## 1. Kiến trúc (Architecture)
 - **Mô hình AI:** MobileNetV2 (`mobilenet_v2.onnx`). Dùng để Phân loại ảnh (Image Classification - 1000 classes ImageNet).
 - **Backend:** FastAPI (Python) + ONNX Runtime.
-- **Frontend:** HTML5, CSS3, JS.
+- **Frontend:** Nginx (Alpine) host HTML5, CSS3, JS.
+- **Triển khai (Deployment):** Đóng gói 100% bằng `docker-compose.yml`.
 
 ## 2. Luật Nghiệp vụ (Business Rules)
 - **Mục tiêu:** Lọc báo động giả do thú cưng gây ra.

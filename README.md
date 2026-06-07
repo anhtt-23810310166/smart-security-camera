@@ -28,18 +28,29 @@ graph TD
     F --> H[Trả về: ALARM (Đèn Đỏ)]
 ```
 
-## 🛠️ Hướng dẫn Khởi chạy (Quick Start)
+## 🛠️ Hướng dẫn Khởi chạy (Deployment)
 
-### 1. Khởi động AI Server (Backend)
+Khuyên dùng **Docker Compose** để chạy dự án một cách an toàn và tự động nhất.
+
+### 1. Triển khai bằng Docker
+Yêu cầu: Đã cài đặt Docker.
 ```bash
+docker-compose up -d --build
+```
+- Truy cập Giao diện: `http://localhost:80`
+- API ngầm chạy tại: `http://localhost:8000`
+
+### 2. Chạy thủ công (Developer Mode)
+Nếu không dùng Docker:
+```bash
+# Terminal 1: Chạy Backend
 cd backend
 pip install -r requirements.txt
 python main.py
-```
-*API được expose tại cổng `8000` (hoặc `8080` tùy cấu hình).*
 
-### 2. Truy cập Control Panel (Frontend)
-Click đúp mở file `frontend/index.html`. Giao diện giám sát sẽ tự động kết nối với Camera của thiết bị.
+# Terminal 2:
+Mở file frontend/index.html bằng trình duyệt.
+```
 
 ## 📁 Cấu trúc Hệ thống (Structure)
 ```text
