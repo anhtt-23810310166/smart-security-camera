@@ -17,15 +17,15 @@ Giải pháp Camera An ninh Thông minh sử dụng **Edge AI** để giải quy
 
 ```mermaid
 graph TD
-    A[Camera phát hiện chuyển động] --> B[Chụp Frame gửi về API]
-    B --> C{ONNX Runtime (MobileNetV2)}
-    C -->|Class ID 151-268| D[Nhận diện: CHÓ]
-    C -->|Class ID 281-285| E[Nhận diện: MÈO]
-    C -->|Class ID khác| F[Nhận diện: VẬT THỂ LẠ / NGƯỜI]
+    A["Camera phát hiện chuyển động"] --> B["Chụp Frame gửi về API"]
+    B --> C{"ONNX Runtime (MobileNetV2)"}
+    C -->|Class ID 151-268| D["Nhận diện: CHÓ"]
+    C -->|Class ID 281-285| E["Nhận diện: MÈO"]
+    C -->|Class ID khác| F["Nhận diện: VẬT THỂ LẠ / NGƯỜI"]
     
-    D --> G[Trả về: SAFE (Đèn Xanh)]
+    D --> G["Trả về: SAFE (Đèn Xanh)"]
     E --> G
-    F --> H[Trả về: ALARM (Đèn Đỏ)]
+    F --> H["Trả về: ALARM (Đèn Đỏ)"]
 ```
 
 ## 🛠️ Hướng dẫn Khởi chạy (Deployment)
